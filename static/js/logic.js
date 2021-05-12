@@ -42,7 +42,7 @@ let overlays = {
     'Earthquakes': allEarthquakes
 }
 
-L.control.layers(baseMaps. overlays).addTo(map)
+L.control.layers(baseMaps, overlays).addTo(map)
 
 // Retrieve earthquake data
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data){
@@ -122,6 +122,17 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     }
 
     legend.addTo(map)
+
+    d3.json('https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json').then(function(plateData){
+
+        L.geoJson(plateData,{
+            color: '#ff6500',
+            weight: 2
+        }).addTo(tectonicplates)
+
+        tectonicplates.addTo(map)
+
+    })
 
 
 })
