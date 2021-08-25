@@ -1,6 +1,6 @@
-# Leaflet Challenge
+# Map of earthquakes 
 
-The goal of this project is to display a map using Leaflet and Mapbox with data from USGS's (last 7 days data) and Earth's tectonic plates.
+The goal of this project is to display a map of earthquakes using Leaflet and Mapbox with data from USGS's (last 7 days data) and Earth's tectonic plates.
 
 Earthquake source: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 
